@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_fullhd"
+    tools:context=".CrearOferta">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutCrear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <!-- ScrollView para que en dispositivos pequeños se pueda ver todo el contenido -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCrear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:id="@+id/tvTituloSeccionCrear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Crear publicación"
+                        android:textColor="@color/my_secundary"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvCategoriaCrear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona una categoría"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/categoriaSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/categorias_array"
+                        android:spinnerMode="dropdown" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvTituloCrear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Título"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/tituloText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ej: Clases de guitarra"
+                        android:inputType="text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvDescripcionCrear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Descripción"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/descripcionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Describe los detalles..."
+                        android:inputType="textMultiLine"
+                        android:minLines="3" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <!-- Botón Publicar -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCrearPublicacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/my_secundary"
+                        android:text="PUBLICAR"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="5dp"
+                        app:rippleColor="@color/my_primary" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

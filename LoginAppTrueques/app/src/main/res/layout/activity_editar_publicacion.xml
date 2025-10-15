@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editarMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarPublicacion"
+    android:padding="16dp">
+
+    <!-- Campo para ingresar el slug -->
+    <EditText
+        android:id="@+id/etSlug"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Slug (3 dígitos)"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón para buscar la publicación -->
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR"
+        app:layout_constraintTop_toBottomOf="@id/etSlug"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Campo para editar título -->
+    <EditText
+        android:id="@+id/etNuevoTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nuevo título"
+        app:layout_constraintTop_toBottomOf="@id/btnBuscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Campo para editar descripción -->
+    <EditText
+        android:id="@+id/etNuevaDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nueva descripción"
+        app:layout_constraintTop_toBottomOf="@id/etNuevoTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="textMultiLine"
+        android:minLines="3"/>
+
+    <!-- Botón para actualizar -->
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR"
+        app:layout_constraintTop_toBottomOf="@id/etNuevaDescripcion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

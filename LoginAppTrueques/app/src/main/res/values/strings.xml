@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TradeSkill</string>
+
+    <string-array name="categorias_array">
+        <item>Sesiones de clases</item>
+        <item>Servicio especial</item>
+        <item>Intercambio</item>
+    </string-array>
+
+</resources>
